@@ -8,4 +8,5 @@
 <li>clonar este repositorio en su pc</li>
 <li>instalar xampp</li>
 <li>levantar la base de datos mySQL</li>
+<li>verificar que tiene bien instaladas las librerias</li>
 <li>ir a src/factory/ConnectionFactory y en el constructor de la clase ConnectionFactory verificar si la url y el usuario son correctos para su pc</li> 
