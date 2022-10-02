@@ -22,19 +22,6 @@ public class Exito extends JDialog {
 	private final JPanel contentPanel = new JPanel();
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		try {
-			Exito dialog = new Exito();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
 	 * Create the dialog.
 	 */
 	public Exito() {
@@ -54,7 +41,7 @@ public class Exito extends JDialog {
 		}
 		{
 			JLabel lblNewLabel_1 = new JLabel("Datos guardados satisfactoriamente");
-			lblNewLabel_1.setForeground(new Color (12, 138, 199));
+			lblNewLabel_1.setForeground(new Color(12, 138, 199));
 			lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 18));
 			lblNewLabel_1.setBounds(27, 122, 322, 21);
 			contentPanel.add(lblNewLabel_1);
@@ -67,8 +54,8 @@ public class Exito extends JDialog {
 				JButton okButton = new JButton("OK");
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						dispose();//sirve para cerrar la ventana actual
-						MenuUsuario usuario = new MenuUsuario(); 
+						dispose();// sirve para cerrar la ventana actual
+						MenuUsuario usuario = new MenuUsuario();
 						usuario.setVisible(true);
 					}
 				});
@@ -80,6 +67,14 @@ public class Exito extends JDialog {
 				JButton cancelButton = new JButton("Cancel");
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
+				cancelButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						dispose();// sirve para cerrar la ventana actual
+						RegistroHuesped registro = new RegistroHuesped();
+						registro.setVisible(true);
+					}
+				});
+
 			}
 		}
 	}
